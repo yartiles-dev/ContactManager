@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager", "ContactManager\ContactManager.csproj", "{C0F4885A-D76E-4A92-9FC1-7401670ED6BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercises 1 and 2", "Exercises 1 and 2\Exercises 1 and 2.csproj", "{03EAE99A-4973-4364-AE16-9D0449DEDAC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0F4885A-D76E-4A92-9FC1-7401670ED6BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0F4885A-D76E-4A92-9FC1-7401670ED6BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0F4885A-D76E-4A92-9FC1-7401670ED6BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0F4885A-D76E-4A92-9FC1-7401670ED6BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03EAE99A-4973-4364-AE16-9D0449DEDAC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03EAE99A-4973-4364-AE16-9D0449DEDAC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03EAE99A-4973-4364-AE16-9D0449DEDAC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03EAE99A-4973-4364-AE16-9D0449DEDAC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
