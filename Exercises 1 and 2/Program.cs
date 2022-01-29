@@ -23,5 +23,5 @@ int RecPowerSum (int X, int N, int b, int sum) {
     return RecPowerSum(X, N, b + 1, (sum + cur)) + RecPowerSum(X, N, b + 1, sum);
 }
 
-Console.WriteLine(Solution(new int[]{-1, 1, -2, 2}));
-Console.WriteLine(PowerSum(10, 2));
+Console.WriteLine($"Exercise 1 {Solution(new int[]{-1, 1, -2, 2})}");
+Console.WriteLine($"Exercise 2 {PowerSum(10, 2)}");
