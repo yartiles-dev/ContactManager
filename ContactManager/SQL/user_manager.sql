@@ -11,7 +11,7 @@
  Target Server Version : 100410
  File Encoding         : 65001
 
- Date: 28/01/2022 17:06:04
+ Date: 28/01/2022 19:47:51
 */
 
 SET NAMES utf8mb4;
@@ -32,7 +32,7 @@ CREATE TABLE `contact`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `fk_contact_user_1`(`OwnerNavigationId`) USING BTREE,
   CONSTRAINT `fk_contact_user_1` FOREIGN KEY (`OwnerNavigationId`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 76 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 77 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Table structure for role
@@ -43,7 +43,7 @@ CREATE TABLE `role`  (
   `description` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `name` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Table structure for user
@@ -58,7 +58,7 @@ CREATE TABLE `user`  (
   `email` varchar(128) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `email`(`email`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 40 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 57 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Table structure for userrole
@@ -71,8 +71,8 @@ CREATE TABLE `userrole`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `fk_role_user_role_1`(`RoleId`) USING BTREE,
   INDEX `fk_user_user_role_1`(`UserId`) USING BTREE,
-  CONSTRAINT `fk_user_user_role_1` FOREIGN KEY (`UserId`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `fk_role_user_role_1` FOREIGN KEY (`RoleId`) REFERENCES `role` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+  CONSTRAINT `fk_role_user_role_1` FOREIGN KEY (`RoleId`) REFERENCES `role` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_user_user_role_1` FOREIGN KEY (`UserId`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
 
 SET FOREIGN_KEY_CHECKS = 1;
