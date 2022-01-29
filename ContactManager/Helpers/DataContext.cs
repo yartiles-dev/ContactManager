@@ -17,10 +17,10 @@ namespace ContactManager.Helpers
             if (!options.IsConfigured)
             {
                 // connect to sql server database
-                // options.UseSqlServer(Configuration.GetConnectionString("user_managerContext"));
+                options.UseSqlServer(Configuration.GetConnectionString("user_managerContext"));
                 
                 // connect to mysql server database
-                options.UseMySql(Configuration.GetConnectionString("user_managerContext"), Microsoft.EntityFrameworkCore.ServerVersion.Parse("10.4.10-mariadb"));
+                // options.UseMySql(Configuration.GetConnectionString("user_managerMySql"), Microsoft.EntityFrameworkCore.ServerVersion.Parse("10.4.10-mariadb"));
             }
         }
 
