@@ -30,7 +30,6 @@ namespace ContactManager.Authorization
                     var userss = (User)context.HttpContext.Items["User"];
                     var userRoles = (List<string>)context.HttpContext.Items["UserRoles"];
                     
-                    userRoles.ForEach(Console.WriteLine);
                     if(!userRoles.Contains("Administrator"))
                         context.Result = new JsonResult(new {message = "Forbidden"})
                             {StatusCode = StatusCodes.Status403Forbidden};
